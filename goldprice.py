@@ -42,8 +42,7 @@ class JSON_FILE(ExtractData):
 
     def writing(self):
         with open(self.file_name, "w", encoding='utf-8') as ww:
-            json.dump(self.extract_data(), ww, ensure_ascii=False)  
-
+            json.dump(self.extract_data(), ww, ensure_ascii=False, indent=1)  # Added indent for better readability
 
 url = 'https://brsapi.ir/FreeTsetmcBourseApi/Api_Free_Gold_Currency.json'  
 file_name = 'data.json'  
